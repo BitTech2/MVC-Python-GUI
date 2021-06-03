@@ -5,7 +5,8 @@ import Model
 import View
 
 fenster = Tk()
-model = Model.Model()
+Booksmodel = Model.Model("Kopiebooks.db", "Books")
+warenkorbModel = Model.Model("Kopiebooks.db", "Warenkorb")
 view = View.View(fenster)
-controller = Controller.Controller(model, view)
+controller = Controller.Controller(Booksmodel, warenkorbModel, view)
 fenster.mainloop()
